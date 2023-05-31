@@ -4,20 +4,22 @@ services:
     build:
       context: ./backend
     ports:
-      - 8000:8000
+      - "8000:8000"
     volumes:
       - ./backend:/app
     depends_on:
       - db
+    tty: true
   frontend:
     build:
       context: ./frontend
     ports:
-      - 3000:3000
+      - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./frontend/medicine-alert/:/app
     depends_on:
       - backend
+    tty: true
   db:
     image: postgres:13.2
     environment:
