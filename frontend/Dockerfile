@@ -10,7 +10,8 @@ WORKDIR /app
 # Reactの依存パッケージをインストール
 COPY medicine-alert/package.json ./
 COPY medicine-alert/package-lock.json ./
-RUN npm install
+
+CMD ["npm","install"]
 
 # ソースコードをコピー
 COPY medicine-alert/ ./
