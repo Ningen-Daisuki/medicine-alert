@@ -11,7 +11,7 @@ WORKDIR /app
 COPY medicine-alert/package.json ./
 COPY medicine-alert/package-lock.json ./
 
-CMD ["npm","install"]
+RUN npm install
 
 # ソースコードをコピー
 COPY medicine-alert/ ./
@@ -20,4 +20,4 @@ COPY medicine-alert/ ./
 EXPOSE 3000
 
 # コンテナ起動時のコマンド
-CMD ["npm", "start"]
+CMD ["npm","start"]
