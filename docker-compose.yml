@@ -13,6 +13,7 @@ services:
   frontend:
     build:
       context: ./frontend
+    command: sh -c "npm start || bash"
     ports:
       - "3000:3000"
     volumes:

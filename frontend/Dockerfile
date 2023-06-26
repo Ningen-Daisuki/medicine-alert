@@ -18,6 +18,3 @@ COPY medicine-alert/ ./
 
 # ポート3000を公開
 EXPOSE 3000
-
-# コンテナ起動時のコマンド
-CMD ["npm","start"]
