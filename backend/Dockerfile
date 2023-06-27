@@ -1,6 +1,8 @@
 # Django用のベースイメージを選択
 FROM python:3.9-slim-buster
 
+ENV PYTHONUNBUFFERED 1
+
 # 必要なパッケージのインストール
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -22,6 +24,3 @@ COPY . /app
 
 # ワーキングディレクトリの設定
 WORKDIR /app
-
-# Djangoの実行
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

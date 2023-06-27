@@ -3,6 +3,7 @@ services:
   backend:
     build:
       context: ./backend
+    command: sh -c "python ./medicine_alert/manage.py runserver 0.0.0.0:8000 || bash"
     ports:
       - "8000:8000"
     volumes:
