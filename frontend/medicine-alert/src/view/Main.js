@@ -4,13 +4,14 @@ import { Alert } from '../components/Alert';
 import { Medicine } from '../components/Medicine';
 
 export const Main = () => {
+  // ログイン後の画面
   return(
     <div>
       <Header />
 
         <Routes>
-          <Route path="/" element={<Alert />} />
-          <Route path="/:userId/medicine" element={<Medicine />} />
+          <Route path="/alert" element={<Alert />} />
+          <Route path="/medicine" element={<Medicine />} />
         </Routes>
     </div>
   );

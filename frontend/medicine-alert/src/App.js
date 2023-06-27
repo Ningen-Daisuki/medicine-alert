@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Lp />} />
           <Route path="/memberRegist" element={<MemberRegist />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/:userId" element={<Main />}/>
+          <Route path="/:userId/main" element={<Main />}/>
           <Route path="*" element={ <NoMatch /> } />
         </Routes>
       </div>

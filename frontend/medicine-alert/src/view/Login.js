@@ -9,7 +9,7 @@ export const Login = () => {
     <div>
       <h2>ログイン画面</h2>
       <p>以下のアカウントでログインする</p>
-      <Link to={{pathname: '/' + userData}} state={{id:userData}}>メイン画面へ</Link>
+      <Link to={{pathname: '/' + userData + "/main"}}>メイン画面へ</Link>
     </div>
   );
 }
