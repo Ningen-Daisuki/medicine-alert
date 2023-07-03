@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
 
 import { Lp } from './view/Lp';
 import { MemberRegist } from './view/MemberRegist';
@@ -9,17 +9,15 @@ import { Main } from './view/Main';
 
 function App() {
   return (
-    <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<Lp />} />
           <Route path="/memberRegist" element={<MemberRegist />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/:userId/main" element={<Main />}/>
+          <Route path="/main/:userId" element={<Main />}/>
           <Route path="*" element={ <NoMatch /> } />
         </Routes>
       </div>
-    </Router>
   );
 }
 
