@@ -1,0 +1,5 @@
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse('''{"result":true,"medicine_list":[{"medicine_id":1,"medicine_name":"test1","grams":"10","when_takes":7,"alarm_list":[{"alarm_id":1,"alart_times":"10:00:00","is_checked":1},{"alarm_id":3,"alart_times":"12:00:00","is_checked":0}]},{"medicine_id":2,"medicine_name":"test2","grams":"20","when_takes":4,"alarm_list":[{"alarm_id":2,"alart_times":"11:00:00","is_checked":0},{"alarm_id":4,"alart_times":"13:00:00","is_checked":0},{"alarm_id":30,"alart_times":"13:36:00","is_checked":0},{"alarm_id":31,"alart_times":"20:37:00","is_checked":0}]},{"medicine_id":29,"medicine_name":"test3","grams":"123","when_takes":3,"alarm_list":[{"alarm_id":32,"alart_times":"08:00:00","is_checked":0},{"alarm_id":33,"alart_times":"12:00:00","is_checked":0}]},{"medicine_id":30,"medicine_name":"test4","grams":"12345","when_takes":7,"alarm_list":[{"alarm_id":35,"alart_times":"08:00:00","is_checked":0},{"alarm_id":36,"alart_times":"12:00:00","is_checked":0},{"alarm_id":37,"alart_times":"21:00:00","is_checked":0}]}]}''')
